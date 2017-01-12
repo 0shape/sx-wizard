@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <link data-require="bootstrap@*" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link data-require="font-awesome@*" rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+    <script data-require="bootstrap@*" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="sx-wizard-tpls.js"></script>
+    <script src="sx-wizard.js"></script>
+    <script src="script.js"></script>
+    <script src="steps/step-05-custmize-nav.js"></script>
+  </head>
+
+  <body ng-app="Demo">
+    <div ng-controller="HomeController">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">Initial Data</h3>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li>Object below will be passed into wizard.</li>
+            <li>You can update inside the controller in each steps throuhgt <code>$scope.$context.data</code>.</li>
+            <li>When wizard was finished it will be returned back through <code>success</code> function.</li>
+            <li>Note that the original <code>data</code> will <strong>NOT</strong> be changed. Wizard will return a new object.</li>
+          </ul>
+          <div>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="username" ng-model="data.username">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" ng-model="data.email">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">Wizard Options</h3>
+        </div>
+        <div class="panel-body">
+          <div>
+            <div class="form-group">
+              <label for="size">Size</label>
+              <input type="text" class="form-control" id="size" ng-model="config.size">
+              <p class="help-block"> Specify the size of wizard modal window. Same as <code>size</code> option in <code>bootstrap.modal</code>. You can put <code>'lg'</code> or <code>'sm'</code>.</p>
+            </div>
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" class="form-control" id="title" ng-model="config.title">
+              <p class="help-block">Specify the wizard title.</p>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" ng-model="config.shadow"> <strong>Shadow</strong>
+              </label>
+              <p class="help-block">Specify if a shadow <code>div</code> will cover the wizard when loading or validating.</p>
+            </div>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <button type="button" class="btn btn-primary" ng-click="launch()">Launch Wizard</button>
+        </div>
+      </div>
+
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">Result</h3>
+        </div>
+        <div class="panel-body">
+          <p>When you finished the wizard, the data will be displayed below.</p>
+          <p>Note that this is <strong>NOT</strong> the same object you specified in "Initial Data".</p>
+          <pre>{{result | json}}</pre>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

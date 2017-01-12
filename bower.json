@@ -1,0 +1,28 @@
+{
+  "author": "shape (c) ",
+  "name": "modal-wizard",
+  "description": "",
+  "version": "2.13.0",
+  "homepage": "",
+  "ignore": [],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "main": "./index.html",
+  "devDependencies": {
+    "angular": "~1.5.10",
+    "angular-bootstrap":"*",
+    "angular-route":"*",
+    "angular-resource":"*",
+    "angular-messages":"*",
+
+    "bootstrap": "*",
+    "jquery": "~2.1.3",
+    "font-awesome": ""
+  },
+  "resolutions": {
+    "angular": "~1.5.10"
+  },
+  "license": "MIT"
+}
