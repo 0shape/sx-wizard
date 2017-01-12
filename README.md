@@ -5,7 +5,7 @@ Worked version of example for http://geekswithblogs.net/shaunxu/archive/2015/04/
 for web server used htt-server from npm
 
 installation:
-> git clone https://*
-> bower install
-> sudo npm install http-server -g
-> http-server ./
+git clone https://github.com/0shape/sx-wizard.git
+bower install
+sudo npm install http-server -g
+http-server ./
