@@ -1,11 +1,14 @@
+# sx-wizard
 
-Worked version of example for http://geekswithblogs.net/shaunxu/archive/2015/04/20/angular-directive-wizard-in-bootstrap-modal.aspx
- with pinned software by bower
+Worked version of example for [angular wizard by Shaun Xu](http://geekswithblogs.net/shaunxu/archive/2015/04/20/angular-directive-wizard-in-bootstrap-modal.aspx) with pinned software by bower
 
-for web server used htt-server from npm
+## about 
 
-installation:
-git clone https://github.com/0shape/sx-wizard.git
-bower install
-sudo npm install http-server -g
-http-server ./
+for web server used http-server from npm
+
+## Installation:
+
+* git clone https://github.com/0shape/sx-wizard.git
+* bower install
+* sudo npm install http-server -g
+* http-server ./
